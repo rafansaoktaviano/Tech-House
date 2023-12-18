@@ -20,7 +20,7 @@ const CardWorks = ({ index, value }) => {
         alt=""
       />
       <div className="h-[100px] bg-[#13161d] w-full  rounded-b-xl flex justify-between items-center px-[24px]">
-        <h1 className="font-bold text-white">Kentuky Fried Chicken</h1>
+        <h1 className="font-bold text-white">{value.name}</h1>
         <FaChevronRight className="text-white" />
       </div>
     </div>
