@@ -36,7 +36,7 @@ const Banner = () => {
         onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
       >
         <SwiperSlide className="">
-          <img src={bg1} alt="" className="w-full h-full" />
+          <img src={bg1} alt="" className="min-w-[500px] min-h-[500px]" loading="lazy" />
           <div class="gradient-overlay"></div>
           <motion.div
             className="absolute w-full  flex justify-center items-center flex-col"
@@ -45,7 +45,7 @@ const Banner = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1.5 }}
           >
-            <h1 className="text-[65px] text-white  font-bold text-center   w-[25%]  tracking-wider">
+            <h1 className="text-[65px] text-white font-bold text-center ">
               Your Idea Our Project
             </h1>
             <h2 className="text-white mb-[24px] ">
@@ -58,7 +58,7 @@ const Banner = () => {
           </motion.div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={bg6} alt="" className="w-full h-full" />
+          <img src={bg6} alt="" className="w-full h-full" loading="lazy" />
           <div class="gradient-overlay"></div>
           <motion.div
             key={currentSlide}
@@ -80,7 +80,7 @@ const Banner = () => {
           </motion.div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={bg2} alt="" className="w-full h-full" />
+          <img src={bg2} alt="" className="w-full h-full" loading="lazy" />
           <div class="gradient-overlay"></div>
           <motion.div
             className="absolute w-full  flex justify-center items-center flex-col"
