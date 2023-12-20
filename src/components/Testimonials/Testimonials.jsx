@@ -34,7 +34,7 @@ const Testimonials = () => {
             gap: "50px",
           }}
         >
-          <h1 className="text-center w-[50%] text-[22px] text-[#C8C8C8] leading-10">
+          <h1 className="text-center w-[50%] text-[22px] text-[#C8C8C8] leading-10 para-about">
             I have been working with Tech House for over a year now and they
             have been fantastic in all aspects of their service. The team is
             always responsive, very helpful and never leaves me waiting on
@@ -62,7 +62,7 @@ const Testimonials = () => {
             gap: "50px",
           }}
         >
-          <h1 className="text-center w-[50%] text-[22px] text-[#C8C8C8] leading-10">
+          <h1 className="text-center w-[50%] text-[22px] text-[#C8C8C8] leading-10 para-about">
             I want to say that building an app is not just about having a great
             idea. It takes years of hard work, patience, and perseverance.
             KIMA's software development team has been doing it for decades and
@@ -89,7 +89,7 @@ const Testimonials = () => {
             gap: "50px",
           }}
         >
-          <h1 className="text-center w-[50%] text-[#C8C8C8] text-[22px] leading-10">
+          <h1 className="text-center w-[50%] text-[#C8C8C8] text-[22px] leading-10 para-about">
             I have been working with KIMA since 2018, and they have been an
             excellent choice. I've had the pleasure of working on projects with
             them in different countries and it has never failed to be a seamless

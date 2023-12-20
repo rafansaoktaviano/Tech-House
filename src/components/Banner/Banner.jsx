@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -15,7 +15,20 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showPagination, setShowPagination] = useState(true);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setShowPagination(window.innerWidth >= 500);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <Swiper
@@ -28,7 +41,7 @@ const Banner = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        navigation={showPagination ? true : false}
         speed={2000}
         modules={[Autoplay, Navigation]}
         className="mySwiper"
@@ -36,7 +49,12 @@ const Banner = () => {
         onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex)}
       >
         <SwiperSlide className="">
-          <img src={bg1} alt="" className="min-w-[500px] min-h-[500px]" loading="lazy" />
+          <img
+            src={bg1}
+            alt=""
+            className="min-w-[500px] min-h-[500px] object-cover "
+            loading="eager"
+          />
           <div class="gradient-overlay"></div>
           <motion.div
             className="absolute w-full  flex justify-center items-center flex-col"
@@ -45,10 +63,10 @@ const Banner = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1.5 }}
           >
-            <h1 className="text-[65px] text-white font-bold text-center ">
+            <h1 className="text-[65px] text-white font-bold text-center   banner-title ">
               Your Idea Our Project
             </h1>
-            <h2 className="text-white mb-[24px] ">
+            <h2 className="text-white mb-[24px] para-about ">
               With our expert team, we recommend the best strategy to
               successfully achive your goals
             </h2>
@@ -58,7 +76,7 @@ const Banner = () => {
           </motion.div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={bg6} alt="" className="w-full h-full" loading="lazy" />
+          <img src={bg6} alt="" className="w-full h-full" loading="eager" />
           <div class="gradient-overlay"></div>
           <motion.div
             key={currentSlide}
@@ -67,10 +85,10 @@ const Banner = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1.5 }}
           >
-            <h1 className="text-[65px] text-white  font-extrabold text-center  tracking-wider">
+            <h1 className="text-[65px] text-white  font-extrabold text-center  tracking-wider banner-title ">
               Dream, Discuss, Develop
             </h1>
-            <h2 className="text-white mb-[24px] ">
+            <h2 className="text-white mb-[24px] para-about ">
               Providing your brands through prospective and creative digital
               solutions
             </h2>
@@ -80,7 +98,7 @@ const Banner = () => {
           </motion.div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={bg2} alt="" className="w-full h-full" loading="lazy" />
+          <img src={bg2} alt="" className="w-full h-full" loading="eager" />
           <div class="gradient-overlay"></div>
           <motion.div
             className="absolute w-full  flex justify-center items-center flex-col"
@@ -89,10 +107,10 @@ const Banner = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1.5 }}
           >
-            <h1 className="text-[65px] text-white  font-extrabold text-center w-[50%] tracking-wider">
+            <h1 className="text-[65px] text-white  font-extrabold text-center xl:w-[50%] tracking-wider banner-title ">
               Where Creativity Meets Technology
             </h1>
-            <h2 className="text-white mb-[24px] ">
+            <h2 className="text-white mb-[24px] para-about">
               Providing your brands through prospective and creative digital
               solutions
             </h2>

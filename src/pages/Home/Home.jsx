@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 import { BsLightningCharge } from "react-icons/bs";
 import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
 import { IoUmbrellaOutline } from "react-icons/io5";
-
+import "./styles.css";
 import CardServices from "../../components/CardServices/CardServices";
 import CardWorks from "../../components/CardWorks/CardWorks";
 
@@ -50,13 +50,12 @@ const Home = () => {
     },
   ];
   return (
-    <>
-      <Nav />
-      <section>
+    <div>
+      <section className="">
         <Banner />
-        <div className=" h-[720px] bg-[#151921] py-[120px] flex  justify-center items-center gap-[200px]  md:px-[200px] ">
+        <div className="wrap-about h-[720px] bg-[#151921] py-[120px] flex  justify-center items-center lg:gap-0  xl:gap-[150px] px-0   ">
           <motion.div
-            className=" h-full flex gap-5"
+            className="img-about  h-full flex gap-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
@@ -68,14 +67,14 @@ const Home = () => {
               <img src={home3} alt="" className="w-full" />
             </div>
           </motion.div>
-          <motion.div className=" py-[50px] w-auto">
-            <h1 className="text-white font-bold tracking-widest mb-[50px]">
+          <motion.div className="about-text py-[50px] w-auto ">
+            <h1 className="text-white  font-bold tracking-widest mb-[50px]">
               ABOUT US
             </h1>
-            <h2 className="text-[35px] text-white font-semibold w-[50%] mb-[50px] ">
+            <h2 className="text-[35px] title-about text-white font-semibold   xl:w-[50%] mb-[50px] ">
               We are more than just a digital agency.
             </h2>
-            <p className="text-[#C8C8C8] text-[15px]   w-[80%]">
+            <p className="text-[#C8C8C8] para-about  text-[15px]   w-[80%] ">
               Tech House is a dynamic and innovative software design and
               engineering team established in 2023. Our mission is to bring
               positive change through technology. With a focus on meeting your
@@ -91,15 +90,15 @@ const Home = () => {
           </motion.div>
         </div>
         {/* Services */}
-        <div className="h-screen bg-[#11141b] py-[72px]">
+        <div className="h-auto bg-[#11141b] py-[72px]">
           <h1 className="text-center text-[#75dab4] tracking-widest ">
             BEST FEATURES
           </h1>
           <h1 className="text-white text-center font-bold text-[64px]">
             SERVICES
           </h1>
-          <div className="flex justify-center items-center h-full mt-[-50px]">
-            <div className="flex gap-20">
+          <div className="flex justify-center items-center h-full mt-[50px]">
+            <div className="flex gap-20 services">
               <CardServices
                 title="Digital Marketing"
                 text="It starts with the identification of
@@ -127,25 +126,25 @@ const Home = () => {
           </div>
         </div>
         {/* OUR WORKS PORTOFOLIO */}
-        <div className="h-[900px] bg-[#151921]  py-[72px]">
+        <div className="h-[700px]   bg-[#151921]  py-[72px]">
           <h1 className="text-center text-[#75dab4] tracking-widest ">
             PORTOFOLIO
           </h1>
-          <h1 className="text-white text-center font-bold text-[64px]">
+          <h1 className="text-white text-center title-about font-bold text-[64px]">
             OUR WORKS.
           </h1>
-          <div className="flex gap-10 w-full overflow-x-auto  mt-[100px] h-full">
+          <div className="flex gap-10 w-full overflow-x-auto   mt-[100px] h-full">
             {ourWork?.map((value, index) => {
               return <CardWorks value={value} index={index} />;
             })}
           </div>
         </div>
         {/* TESTIMONIALS */}
-        <div className="h-[800px] bg-[#151921] py-[72px]">
-          <h1 className="text-center text-[#75dab4] tracking-widest ">
+        <div className="h-auto bg-[#151921] py-[150px]">
+          <h1 className="text-center  text-[#75dab4] tracking-widest ">
             WHAT PEOPLE SAYS ?
           </h1>
-          <h1 className="text-white text-center font-bold text-[64px] mb-[50px]">
+          <h1 className="text-white  title-about text-center font-bold text-[64px] mb-[50px]">
             TESTIMONIALS.
           </h1>
           <div>
@@ -153,61 +152,61 @@ const Home = () => {
           </div>
         </div>
         {/* CONTACT US */}
-        <div className="h-[700px] bg-[#151921] py-[72px]">
+        <div className="h-auto  bg-[#151921] py-[20px]">
           <h1 className="text-center text-[#75dab4] tracking-widest ">
             GET IN TOUCH
           </h1>
-          <h1 className="text-white text-center font-bold text-[64px] mb-[50px]">
+          <h1 className="text-white text-center title-about font-bold text-[64px] lg:mb-[50px]  mb-[20px]">
             CONTACT US.
           </h1>
-          <div className="px-[300px] mb-[40px]">
-            <div className="flex gap-10 mb-[20px] ">
-              <div class="relative z-0 w-[50%] mb-5 group">
+          <div className="wrap-getintouch px-[300px] mb-[40px]">
+            <div className="flex gap-10 mb-[20px] name-gmail">
+              <div className="inputan relative z-0 w-[50%] mb-5 group">
                 <input
                   type="text"
                   name="fullname"
                   id="fullname"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className=" block   py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
                   for="floating_email"
-                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className=" peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Fullname
                 </label>
               </div>
-              <div class="relative z-0 w-[50%] mb-5 group">
+              <div className=" inputan relative z-0 w-[50%] mb-5 group">
                 <input
                   type="email"
                   name="floating_email"
                   id="floating_email"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className="  block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
                   for="floating_email"
-                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Email address
                 </label>
               </div>
             </div>
             <div>
-              <div class="relative z-0 w-full mb-5 group">
+              <div className="relative z-0 w-full mb-5 group">
                 <textarea
                   type="text"
                   name="message"
                   id="message"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
                 />
                 <label
                   for="floating_email"
-                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                 >
                   Message
                 </label>
@@ -220,10 +219,9 @@ const Home = () => {
             </button>
           </div>
         </div>
-          <Footer />
-       
+        <Footer />
       </section>
-    </>
+    </div>
   );
 };
 

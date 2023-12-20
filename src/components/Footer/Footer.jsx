@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      <div className="h-[400px] bg-[#11141b] py-[72px] text-white p-[300px]">
+      <div className="h-[400px] bg-[#11141b] py-[72px] text-white wrap-footer p-[300px]">
         <h1 className="text-[32px] font-bold">Tech House</h1>
         <h1 className="mb-[50px]">&copy; 2023 Tech House. All rights reserved.</h1>
         <div className="flex gap-3">

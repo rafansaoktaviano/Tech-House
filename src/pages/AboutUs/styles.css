@@ -1,0 +1,56 @@
+@media (min-width: 1500px) {
+  .wrap-aboutus {
+    padding: 200px;
+  }
+}
+@media (max-width: 1500px) {
+  .wrap-aboutus {
+    padding: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .wrap-aboutus {
+    padding: 50px;
+  }
+  .employes {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 425px) {
+  .whoWeAre {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .wrap-aboutus {
+    height: auto;
+    gap: 0;
+    padding-top: 100px;
+  }
+  .employes {
+    flex-direction: column;
+    padding-left: 10px;
+  }
+  .text-our-team {
+    display: none;
+  }
+  .text-employees {
+    margin-bottom: 24px;
+  }
+  .card-team {
+    width: 100%;
+  }
+  .wrap-about2 {
+    flex-direction: column;
+  }
+  .wrapper-about{
+    width: 100%;
+    padding-left: 20px;
+  }
+  .test2{
+    margin: 0;
+  }
+  .test3{
+    width: 100%;
+  }
+}

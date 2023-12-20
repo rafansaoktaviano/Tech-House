@@ -3,7 +3,7 @@ import React from "react";
 const CardServices = (props) => {
   return (
     <>
-      <div className="w-[370px] h-[510px] bg-[#151921] p-[60px] text-center">
+      <div className="max-w-[370px] min-h-[510px] bg-[#151921] p-[60px] text-center">
         <div className="w-full flex justify-center items-center mb-[24px]">
           {props.icon}
         </div>
