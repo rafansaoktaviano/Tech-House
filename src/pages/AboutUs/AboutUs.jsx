@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+
 
 import "./styles.css";
 import axios from "axios";
@@ -42,7 +39,7 @@ const AboutUs = () => {
           <div className="w-full h-[50%] flex whoWeAre items-center gap-20 ">
             <h1 className="text-[30px] min-w-[300px] w-[300px] font-bold ">Our Culture ?</h1>
             <h1 className="text-[15px] text-[#C8C8C8] ">
-              our company culture thrives on agility, creativity, and a passion
+              Our company culture thrives on agility, creativity, and a passion
               for pushing boundaries. We embrace a culture of constant learning
               and adaptation, staying ahead of industry trends and technologies.
               Our values, including transparency, client-centricity, and a

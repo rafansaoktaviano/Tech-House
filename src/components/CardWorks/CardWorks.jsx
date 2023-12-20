@@ -1,16 +1,8 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
 
 import "./styles.css";
 import { FaChevronRight } from "react-icons/fa";
-// import required modules
-import { FreeMode, Pagination } from "swiper/modules";
-import bg1 from "./../../assets/bg1.avif";
+
 const CardWorks = ({ index, value }) => {
   return (
     <div className="min-w-[400px]  h-[400px] bg-white rounded-2xl shadow-xl">

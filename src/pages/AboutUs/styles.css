@@ -3,6 +3,11 @@
     padding: 200px;
   }
 }
+@media (min-width: 1400px) {
+  .employes {
+    padding-left: 20px;
+  }
+}
 @media (max-width: 1500px) {
   .wrap-aboutus {
     padding: 50px;
@@ -43,14 +48,14 @@
   .wrap-about2 {
     flex-direction: column;
   }
-  .wrapper-about{
+  .wrapper-about {
     width: 100%;
     padding-left: 20px;
   }
-  .test2{
+  .test2 {
     margin: 0;
   }
-  .test3{
+  .test3 {
     width: 100%;
   }
 }

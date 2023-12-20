@@ -5,14 +5,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./styles.css";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import bg1 from "./../../assets/bg1.avif";
 import bg2 from "./../../assets/bg2.avif";
 import bg6 from "./../../assets/bg6.avif";
 
 import { motion } from "framer-motion";
 
-import { TypeAnimation } from "react-type-animation";
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showPagination, setShowPagination] = useState(true);
@@ -53,7 +52,7 @@ const Banner = () => {
             src={bg1}
             alt=""
             className="min-w-[500px] min-h-[500px] object-cover "
-            loading="eager"
+            loading="lazy"
           />
           <div class="gradient-overlay"></div>
           <motion.div
@@ -61,7 +60,7 @@ const Banner = () => {
             key={currentSlide}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1.5 }}
+            transition={{ delay: 0.5, duration: 1 }}
           >
             <h1 className="text-[65px] text-white font-bold text-center   banner-title ">
               Your Idea Our Project

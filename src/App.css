@@ -1,8 +1,6 @@
 
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 
 /* For Firefox */
 body {
@@ -24,3 +22,6 @@ body::-webkit-scrollbar-track {
   background-color: black; /* Set scrollbar track color to white */
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

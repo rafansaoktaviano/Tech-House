@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 const Nav = () => {
   const [scrolling, setScrolling] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > window.innerHeight) {
@@ -46,11 +46,16 @@ const Nav = () => {
       </div>
       <nav className={` ${isMenuOpen ? "block" : "hidden"} wrap-ul w-full `}>
         <ul className="flex gap-[20px] font-semibold wrap-li items-center">
-          <li className="li cursor-pointer">Services</li>
+          <li
+            onClick={() => navigate("/services")}
+            className="li cursor-pointer"
+          >
+            Services
+          </li>
           <li className="li cursor-pointer">Our Teams</li>
-          <Link to={"/about"}>
-            <li className="li cursor-pointer">About Us</li>
-          </Link>
+          <li onClick={() => navigate("/about")} className="li cursor-pointer">
+            About Us
+          </li>
           <li className="li cursor-pointer">Contact Us</li>
         </ul>
       </nav>
