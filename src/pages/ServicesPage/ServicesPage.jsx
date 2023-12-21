@@ -58,7 +58,7 @@ const ServicesPage = () => {
             //   key={currentSlide}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 0.5, duration: 1.5 }}
             loading="lazy"
           >
             <h1 className="text-[65px] text-white font-bold text-center  tracking-widest ">

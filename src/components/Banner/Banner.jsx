@@ -6,9 +6,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./styles.css";
 import { Autoplay, Navigation } from "swiper/modules";
-import bg1 from "./../../assets/bg1.avif";
-import bg2 from "./../../assets/bg2.avif";
-import bg6 from "./../../assets/bg6.avif";
+import bg1 from "./../../assets/bg1.jpeg";
+import bg2 from "./../../assets/bg2.jpeg";
+import bg6 from "./../../assets/bg6.jpeg";
 
 import { motion } from "framer-motion";
 
@@ -75,7 +75,7 @@ const Banner = () => {
           </motion.div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={bg6} alt="" className="w-full h-full" loading="eager" />
+          <img src={bg6} alt="" className="min-w-[500px] min-h-[500px]" loading="eager" />
           <div class="gradient-overlay"></div>
           <motion.div
             key={currentSlide}
@@ -97,7 +97,7 @@ const Banner = () => {
           </motion.div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={bg2} alt="" className="w-full h-full" loading="eager" />
+          <img src={bg2} alt="" className="max-w-[2070px] max-h-[1380px]" loading="eager" />
           <div class="gradient-overlay"></div>
           <motion.div
             className="absolute w-full  flex justify-center items-center flex-col"

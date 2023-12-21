@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-
 import "./styles.css";
 import axios from "axios";
-import work from "./../../assets/work.avif";
+import work from "./../../assets/work.jpeg";
 import Footer from "../../components/Footer/Footer";
 const AboutUs = () => {
   const [userData, setUserData] = useState([]);
@@ -29,7 +28,9 @@ const AboutUs = () => {
       <div>
         <div className="wrap-aboutus h-[720px]  bg-[#11141b] py-[120px] flex  justify-center items-center lg:gap-0  xl:gap-[150px] px-0  text-white flex-col">
           <div className="w-full whoWeAre h-[50%] flex items-center gap-20">
-            <h1 className="text-[30px] min-w-[300px] w-[300px] font-bold">Who We Are ?</h1>
+            <h1 className="text-[30px] min-w-[300px] w-[300px] font-bold">
+              Who We Are ?
+            </h1>
             <h1 className="text-[15px] text-[#C8C8C8]">
               We are the software design and engineering team with ones top shop
               high-quality services that plays a key role infulfilling your
@@ -37,7 +38,9 @@ const AboutUs = () => {
             </h1>
           </div>
           <div className="w-full h-[50%] flex whoWeAre items-center gap-20 ">
-            <h1 className="text-[30px] min-w-[300px] w-[300px] font-bold ">Our Culture ?</h1>
+            <h1 className="text-[30px] min-w-[300px] w-[300px] font-bold ">
+              Our Culture ?
+            </h1>
             <h1 className="text-[15px] text-[#C8C8C8] ">
               Our company culture thrives on agility, creativity, and a passion
               for pushing boundaries. We embrace a culture of constant learning
@@ -64,7 +67,7 @@ const AboutUs = () => {
           <div className="w-[60%] card-team  overflow-x-scroll  flex gap-10">
             {userData &&
               userData.map((value, index) => {
-                console.log(value);
+
                 return (
                   <div
                     key={index}

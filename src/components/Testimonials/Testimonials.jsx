@@ -74,7 +74,7 @@ const Testimonials = () => {
               <img
                 src={gloria}
                 alt=""
-                className="w-[75px] h-[75px] rounded-full"
+                className="w-[75px] h-[75px] max-w-[200px] max-h-[200px] rounded-full"
               />
             </div>
             <h1 className="text-[#75dab4] text-[18px]">Gloria C Mercado</h1>

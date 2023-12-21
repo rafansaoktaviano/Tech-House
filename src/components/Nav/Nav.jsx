@@ -47,13 +47,30 @@ const Nav = () => {
       <nav className={` ${isMenuOpen ? "block" : "hidden"} wrap-ul w-full `}>
         <ul className="flex gap-[20px] font-semibold wrap-li items-center">
           <li
-            onClick={() => navigate("/services")}
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigate("/services");
+            }}
             className="li cursor-pointer"
           >
             Services
           </li>
-          <li className="li cursor-pointer">Our Teams</li>
-          <li onClick={() => navigate("/about")} className="li cursor-pointer">
+          <li
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigate("/ourteams");
+            }}
+            className="li cursor-pointer"
+          >
+            Our Teams
+          </li>
+          <li
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigate("/about");
+            }}
+            className="li cursor-pointer"
+          >
             About Us
           </li>
           <li className="li cursor-pointer">Contact Us</li>
