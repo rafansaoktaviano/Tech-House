@@ -73,7 +73,15 @@ const Nav = () => {
           >
             About Us
           </li>
-          <li className="li cursor-pointer">Contact Us</li>
+          <li
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigate("/contact");
+            }}
+            className="li cursor-pointer"
+          >
+            Contact Us
+          </li>
         </ul>
       </nav>
     </header>
