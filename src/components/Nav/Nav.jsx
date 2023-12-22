@@ -49,16 +49,16 @@ const Nav = () => {
           <li
             onClick={() => {
               setIsMenuOpen(false);
-              navigate("/services");
+              // navigate("/services");
             }}
             className="li cursor-pointer"
           >
-            Services
+            <a href="/services">Services</a>
           </li>
           <li
             onClick={() => {
               setIsMenuOpen(false);
-              navigate("/ourteams");
+              // navigate("/ourteams");
             }}
             className="li cursor-pointer"
           >
