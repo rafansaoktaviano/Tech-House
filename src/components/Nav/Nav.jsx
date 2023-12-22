@@ -49,7 +49,6 @@ const Nav = () => {
           <li
             onClick={() => {
               setIsMenuOpen(false);
-              // navigate("/services");
             }}
             className="li cursor-pointer"
           >
@@ -58,29 +57,26 @@ const Nav = () => {
           <li
             onClick={() => {
               setIsMenuOpen(false);
-              // navigate("/ourteams");
             }}
             className="li cursor-pointer"
           >
-            Our Teams
+            <a href="/ourteams">Our Teams</a>
           </li>
           <li
             onClick={() => {
               setIsMenuOpen(false);
-              navigate("/about");
             }}
             className="li cursor-pointer"
           >
-            About Us
+            <a href="/about">About Us</a>
           </li>
           <li
             onClick={() => {
               setIsMenuOpen(false);
-              navigate("/contact");
             }}
             className="li cursor-pointer"
           >
-            Contact Us
+            <a href="/contact">Contact Us</a>
           </li>
         </ul>
       </nav>
