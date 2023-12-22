@@ -11,10 +11,12 @@ import bg2 from "./../../assets/bg2.jpeg";
 import bg6 from "./../../assets/bg6.jpeg";
 
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [showPagination, setShowPagination] = useState(true);
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleResize = () => {
@@ -69,13 +71,13 @@ const Banner = () => {
               With our expert team, we recommend the best strategy to
               successfully achive your goals
             </h2>
-            <button className="border px-[35px] py-[12px] font-semibold text-white transition ease-in-out duration-100 hover:bg-white hover:text-black">
+            <button onClick={() => navigate("/contact")} className="border px-[35px] py-[12px] font-semibold text-white transition ease-in-out duration-100 hover:bg-white hover:text-black">
               Look More
             </button>
           </motion.div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={bg6} alt="" className="min-w-[500px] min-h-[500px]" loading="eager" />
+          <img src={bg6} alt="" className="w-full h-full" loading="eager" />
           <div class="gradient-overlay"></div>
           <motion.div
             key={currentSlide}
@@ -91,13 +93,13 @@ const Banner = () => {
               Providing your brands through prospective and creative digital
               solutions
             </h2>
-            <button className="border px-[35px] py-[12px] font-semibold text-white transition ease-in-out duration-100 hover:bg-white hover:text-black">
+            <button onClick={() => navigate("/contact")} className="border px-[35px] py-[12px] font-semibold text-white transition ease-in-out duration-100 hover:bg-white hover:text-black">
               Look More
             </button>
           </motion.div>
         </SwiperSlide>
         <SwiperSlide className="">
-          <img src={bg2} alt="" className="max-w-[2070px] max-h-[1380px]" loading="eager" />
+          <img src={bg2} alt="" className="w-full h-full" loading="eager" />
           <div class="gradient-overlay"></div>
           <motion.div
             className="absolute w-full  flex justify-center items-center flex-col"
@@ -113,7 +115,7 @@ const Banner = () => {
               Providing your brands through prospective and creative digital
               solutions
             </h2>
-            <button className="border px-[35px] py-[12px] font-semibold text-white transition ease-in-out duration-100 hover:bg-white hover:text-black">
+            <button onClick={() => navigate("/contact")} className="border px-[35px] py-[12px] font-semibold text-white transition ease-in-out duration-100 hover:bg-white hover:text-black">
               Look More
             </button>
           </motion.div>

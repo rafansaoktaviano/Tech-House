@@ -49,7 +49,7 @@ const ServicesPage = () => {
           <img
             src={servicesbanner}
             alt=""
-            className="min-w-[400px] min-h-[500px] w-full h-full object-cover "
+            className=" w-full h-full object-cover "
             loading="eager"
           />
           <div class="gradient-overlay"></div>
