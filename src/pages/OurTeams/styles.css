@@ -1,3 +1,8 @@
+@media (min-width: 1500px) {
+  .wrap-our {
+    padding: 200px;
+  }
+}
 @media (max-width: 1500px) {
   .wrap-teams {
     padding: 100px;

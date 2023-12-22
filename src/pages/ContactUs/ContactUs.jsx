@@ -3,16 +3,16 @@ import Footer from "../../components/Footer/Footer";
 
 const ContactUs = () => {
   return (
-    <div className="h-screen">
+    <div className="h-screen ">
       <section>
-        <div className="w-full h-full max-h-screen py-[200px] bg-[#151921]">
+        <div className="w-full h-full  py-[200px] bg-[#151921]">
           <div className="h-auto   py-[20px]">
             <h1 className="text-white text-center title-about font-bold text-[64px] lg:mb-[50px]  mb-[20px]">
               <span className="text-[#75dab4]"> LET'S</span> TALK ABOUT YOUR
               PROJECT.
             </h1>
             <form action="">
-              <div className="wrap-getintouch px-[300px] mb-[40px]">
+              <div className="wrap-getintouch px-[300px] mb-[50px]">
                 <div className="flex gap-10 mb-[20px] name-gmail">
                   <div className="inputan relative z-0 w-[50%] mb-5 group">
                     <input
@@ -67,7 +67,7 @@ const ContactUs = () => {
                 </div>
               </div>
             </form>
-            <div className="flex justify-center items-center">
+            <div className="  flex justify-center items-center">
               <button className=" border px-[35px] py-[12px] font-semibold text-white transition ease-in-out duration-100 hover:bg-white hover:text-black">
                 SEND MESSAGE
               </button>
