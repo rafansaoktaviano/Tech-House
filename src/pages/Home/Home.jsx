@@ -216,7 +216,7 @@ const Home = () => {
             </div>
           </form>
 
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center mb-[100px]">
             <button className=" border px-[35px] py-[12px] font-semibold text-white transition ease-in-out duration-100 hover:bg-white hover:text-black">
               SEND MESSAGE
             </button>
